@@ -1,6 +1,6 @@
 {
-  "id": "obsidian-sample",
-  "name": "Obsidian Sample",
+  "id": "obsidian-background",
+  "name": "Backgroundset",
   "version": "0.0.1",
   "minAppVersion": "1.5.8",
   "description": "This is an sample of the simplest obsidian plugin to develop.",
