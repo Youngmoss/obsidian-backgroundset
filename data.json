@@ -1,7 +1,8 @@
 {
-  "imageAdressList": [
-    "blob:app://obsidian.md/2eeefc57-ef48-4b79-9229-157a3ae6ff22",
-    "blob:app://obsidian.md/33457fd7-eab4-428f-ac4c-7fac124f51fc"
-  ],
+  "defaultFolder": "images",
+  "transTime": 1000,
+  "changeTime": 600000,
+  "opcity": 0.8,
+  "whetherrandom": 1,
   "fadeOutTime": 1000
 }
