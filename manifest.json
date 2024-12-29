@@ -2,7 +2,7 @@
   "id": "obsidian-background",
   "name": "Backgroundset",
   "version": "0.0.1",
-  "minAppVersion": "1.5.8",
+  "minAppVersion": "0.0.1",
   "description": "This is an sample of the simplest obsidian plugin to develop.",
   "isDesktopOnly": false
 }
