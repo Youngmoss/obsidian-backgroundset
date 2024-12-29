@@ -2,7 +2,7 @@ const { PluginSettingTab, Setting, Plugin, debounce } = require('obsidian');
 
 // 设置默认值
 const DEFAULT_SETTINGS = {
-	defaultFolder: '',
+	defaultFolder: '',//default folder
 	transTime: 1000,//fade out-in time
 	changeTime: 120000,//change time default 20 min
 	opacity: 0.9,
@@ -101,7 +101,7 @@ class MySettingTab extends PluginSettingTab {
 			.setName('Apply random Background')
 			.addButton(
 				(button) => button
-					.setButtonText('Random Background')
+					.setButtonText('Apply Background')
 					.onClick(() => {
 						this.plugin.setRandomBackground();
 					})
