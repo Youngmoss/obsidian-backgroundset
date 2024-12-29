@@ -58,4 +58,11 @@ This is a plugin for [Obsidian](https://obsidian.md/) that allows users to manag
 
    - Find "Backgroundset" and toggle it on.
 
+---
+
+
+## Notice
+1. Use relative path starting from your vault.
+2. Don't set Strange values such as short changetime,long transtime or small opacity.
+
   
