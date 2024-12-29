@@ -1,8 +1,9 @@
 {
-  "defaultFolder": "images",
-  "transTime": 1000,
-  "changeTime": 600000,
-  "opcity": 0.8,
+  "defaultFolder": "images/background",
+  "transTime": "1000",
+  "changeTime": 60000,
+  "opacity": 0.9,
   "whetherrandom": 1,
+  "opcity": 0.91,
   "fadeOutTime": 1000
 }
