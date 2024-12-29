@@ -244,7 +244,6 @@ module.exports = class MyPlugin extends Plugin {
 	}
 
 	async setRandomBackground() {
-		await this.deleteBackground()
 		this.updateImageList();
 		let len = globalThis.imageAdressList.length;
 		if (len === 0) {
@@ -259,6 +258,9 @@ module.exports = class MyPlugin extends Plugin {
 		apply();
 		// 如果 `changeTime` 已设定，定时更换背景
 		if (this.settings.changeTime > 0) {
+			// 清除旧的定时器
+			if (this.backgroundChangeInterval) 
+				clearInterval(this.backgroundChange)
 			// 设置新的定时器
 			this.backgroundChangeInterval = setInterval((() => {
 				apply();
@@ -268,7 +270,6 @@ module.exports = class MyPlugin extends Plugin {
 	}
 
 	async setOrderedBackground(index) {
-		await this.deleteBackground()
 		this.updateImageList();
 		let len = globalThis.imageAdressList.length;
 		if (len === 0) {
@@ -280,6 +281,9 @@ module.exports = class MyPlugin extends Plugin {
 		}; apply();
 		// 如果 `changeTime` 已设定，定时更换背景
 		if (this.settings.changeTime > 0) {
+			// 清除旧的定时器
+			if (this.backgroundChangeInterval) 
+				clearInterval(this.backgroundChange)
 			// 设置新的定时器
 			this.backgroundChangeInterval = setInterval(() => {
 				apply();
