@@ -1,8 +1,10 @@
 {
-  "id": "obsidian-background",
-  "name": "Backgroundset",
-  "version": "0.1.0",
+  "author": "daonali",
   "minAppVersion": "0.1.0",
+  "name": "Backgroundset",
+  "id": "obsidian-background",
+  "version": "0.1.0",
   "description": "This is an sample of the simplest obsidian plugin to develop.",
+  "authorUrl": "https://github.com/Youngmoss",
   "isDesktopOnly": false
 }
