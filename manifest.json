@@ -2,9 +2,9 @@
   "author": "daonali",
   "minAppVersion": "0.1.0",
   "name": "Backgroundset",
-  "id": "obsidian-background",
+  "id": "backgroundset",
   "version": "0.1.0",
-  "description": "Allow you to set background image set(folder) for obsidian",
+  "description": "Allow you to set background image set(folder)",
   "authorUrl": "https://github.com/Youngmoss",
   "isDesktopOnly": false
 }
