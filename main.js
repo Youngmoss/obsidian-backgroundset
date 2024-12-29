@@ -20,8 +20,6 @@ class MySettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
-		containerEl.createEl('h2', { text: 'Background Settings' });
-
 		// set defaultFolder
 		new Setting(containerEl)
 			.setName('Set your Background defaultFolder')
