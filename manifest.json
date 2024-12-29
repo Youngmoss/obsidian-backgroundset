@@ -4,7 +4,7 @@
   "name": "Backgroundset",
   "id": "obsidian-background",
   "version": "0.1.0",
-  "description": "This is an sample of the simplest obsidian plugin to develop.",
+  "description": "Allow you to set background image set(folder) for obsidian",
   "authorUrl": "https://github.com/Youngmoss",
   "isDesktopOnly": false
 }
