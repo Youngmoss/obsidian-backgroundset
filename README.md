@@ -44,7 +44,7 @@ This is a plugin for [Obsidian](https://obsidian.md/) that allows users to manag
 
   
 
-   - On Windows: Obsidian Vault\.obsidian\plugins
+   - On Windows: Obsidian Vault/.obsidian/plugins
 
   
 
@@ -62,7 +62,7 @@ This is a plugin for [Obsidian](https://obsidian.md/) that allows users to manag
 
 
 ## Notice
-1. Use relative path starting from your vault.
+1. Use relative path starting from your vault.and **DON'T** put your folder in a floder like .****(Such as.obsidian)
 2. Don't set Strange values such as short changetime,long transtime or small opacity.
 
   
