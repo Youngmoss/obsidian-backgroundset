@@ -28,6 +28,8 @@ This is a plugin for [Obsidian](https://obsidian.md/) that allows users to manag
 - You can't choose a folder out of your vault or inside the .*** folder.
 - It will break if you change images too fast.
 
+It seems dosen't affect normal use?
+
 ---
 
   
@@ -63,6 +65,3 @@ This is a plugin for [Obsidian](https://obsidian.md/) that allows users to manag
    - Find "Backgroundset" and toggle it on.
 
   
-  
-
-~~If you encounter any issues or have feature requests, feel free to open an issue or submit a pull request!~~
