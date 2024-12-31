@@ -1,5 +1,4 @@
 const { PluginSettingTab, Setting, Plugin, debounce } = require('obsidian');
-
 // 设置默认值
 const DEFAULT_SETTINGS = {
 	defaultFolder: '',//default folder
