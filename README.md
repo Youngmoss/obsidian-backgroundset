@@ -23,12 +23,6 @@ This is a plugin for [Obsidian](https://obsidian.md/) that allows users to manag
 - **Random Background**: Automatically set a random background from the list.
 - **Fade Effects**: Smooth fade-in and fade-out transitions for background changes.
 
-## Problem
-- If you want to choose a specific image,you need delete current background first.
-- You can't choose a folder out of your vault or inside the .*** folder.
-- It will break if you change images too fast.
-
-It seems dosen't affect normal use?
 
 ---
 
@@ -50,7 +44,7 @@ It seems dosen't affect normal use?
 
   
 
-   - On Windows: Obsidian Vault\.obsidian\plugins
+   - On Windows: Obsidian Vault/.obsidian/plugins
 
   
 
@@ -63,5 +57,12 @@ It seems dosen't affect normal use?
   
 
    - Find "Backgroundset" and toggle it on.
+
+---
+
+
+## Notice
+1. Use relative path starting from your vault.and **DON'T** put your folder in a floder like .****(Such as.obsidian)
+2. Don't set Strange values such as short changetime,long transtime or small opacity.
 
   
