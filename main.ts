@@ -117,7 +117,7 @@ class BackgroundSettingTab extends PluginSettingTab {
 		// 显示图片编号（以网格形式排列）
 		const imageListContainer = containerEl.createEl('div', { cls: 'image-grid' });
 
-		globalThis.imageAdressList.forEach((imagePath, index) => {
+		this.imageAdressList.forEach((imagePath, index) => {
 			const imgContainer = imageListContainer.createDiv({ cls: 'image-item' });
 
 			// 添加缩略图
@@ -140,8 +140,9 @@ class BackgroundSettingTab extends PluginSettingTab {
 
 // 主插件类
 module.exports = class BackgroundSet extends Plugin {
+	
 	async onload() {
-		globalThis.imageAdressList = [];
+		this.imageAdressList = [];
 		await this.loadSettings();
 		this.app.workspace.onLayoutReady(() => {
 			this.addSettingTab(new BackgroundSettingTab(this.app, this));
@@ -151,7 +152,7 @@ module.exports = class BackgroundSet extends Plugin {
 
 	onunload() {
 		this.deleteBackground();
-		delete globalThis.imageAdressList;
+		delete this.imageAdressList;
 	}
 
 	async loadSettings() {
@@ -173,7 +174,7 @@ module.exports = class BackgroundSet extends Plugin {
 		}
 
 		// 扫描文件夹并更新图片列表
-		globalThis.imageAdressList = folder.children
+		this.imageAdressList = folder.children
 			.filter((file) => file.extension === 'png' || file.extension === 'jpg' || file.extension === 'jpeg')
 			.map((file) => this.app.vault.getResourcePath(file));
 	}
@@ -198,7 +199,7 @@ module.exports = class BackgroundSet extends Plugin {
 	}
 
 	async setBackground(index) {
-		const imageUrl = globalThis.imageAdressList[index];
+		const imageUrl = this.imageAdressList[index];
 		let styleElement = document.getElementById('background-style');
 
 		if (!styleElement) {
@@ -243,7 +244,7 @@ module.exports = class BackgroundSet extends Plugin {
 
 	async setRandomBackground() {
 		this.updateImageList();
-		let len = globalThis.imageAdressList.length;
+		let len = this.imageAdressList.length;
 		if (len === 0) {
 			console.warn('No images available in the URL list.');
 			return;
@@ -269,7 +270,7 @@ module.exports = class BackgroundSet extends Plugin {
 
 	async setOrderedBackground(index) {
 		this.updateImageList();
-		let len = globalThis.imageAdressList.length;
+		let len = this.imageAdressList.length;
 		if (len === 0) {
 			console.warn('No images available in the URL list.');
 			return;
