@@ -1,9 +1,9 @@
 {
   "author": "daonali",
-  "minAppVersion": "0.1.0",
+  "minAppVersion": "0.8.0",
   "name": "Backgroundset",
   "id": "backgroundset",
-  "version": "0.1.0",
+  "version": "0.8.0",
   "description": "Allow you to set background image set(folder)",
   "authorUrl": "https://github.com/Youngmoss",
   "isDesktopOnly": false
