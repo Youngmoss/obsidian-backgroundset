@@ -117,7 +117,7 @@ class BackgroundSettingTab extends PluginSettingTab {
 		// 显示图片编号（以网格形式排列）
 		const imageListContainer = containerEl.createEl('div', { cls: 'image-grid' });
 
-		this.imageAdressList.forEach((imagePath, index) => {
+		this.plugin.imageAdressList.forEach((imagePath, index) => {
 			const imgContainer = imageListContainer.createDiv({ cls: 'image-item' });
 
 			// 添加缩略图
