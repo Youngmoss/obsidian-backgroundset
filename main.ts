@@ -9,7 +9,7 @@ const DEFAULT_SETTINGS = {
 };
 
 // 设置面板
-class MySettingTab extends PluginSettingTab {
+class BackgroundSettingTab extends PluginSettingTab {
 	constructor(app, plugin) {
 		super(app, plugin);
 		this.plugin = plugin;
@@ -21,11 +21,11 @@ class MySettingTab extends PluginSettingTab {
 
 		// set defaultFolder
 		new Setting(containerEl)
-			.setName('Set your Background defaultFolder')
+			.setName('Background defaultFolder')
+			.setDesc("Use relative path starting from your vault(not.obsidian).")
 			.addText(
 				(text) => text
-					.setPlaceholder(`a relative path starting from your vault
-						Example: images/backgrounds`)
+					.setPlaceholder("Example: images/backgrounds")
 					.setValue(this.plugin.settings.defaultFolder)
 					.onChange(debounce(async (value) => {
 						this.plugin.settings.defaultFolder = value;
@@ -37,7 +37,6 @@ class MySettingTab extends PluginSettingTab {
 		// whether random
 		new Setting(containerEl)
 			.setName("Random play")
-			.setDesc("Toggle random background playback")
 			.addToggle(
 				(toggle) => toggle
 					.setValue(this.plugin.settings.whetherrandom) // 根据当前设置初始化开关状态
@@ -50,10 +49,10 @@ class MySettingTab extends PluginSettingTab {
 
 		// set changeTime
 		new Setting(containerEl)
-			.setName('Set the change time(min)')
+			.setName('Change time(min)')
 			.addText(
 				(text) => text
-					.setPlaceholder('change time(min)')
+					.setPlaceholder('Change time(min)')
 					.setValue((this.plugin.settings.changeTime / 60000.0).toString())
 					.onChange(debounce(async (value) => {
 						this.plugin.settings.changeTime = value * 60000;
@@ -64,7 +63,7 @@ class MySettingTab extends PluginSettingTab {
 
 		// set opacity
 		new Setting(containerEl)
-			.setName('Set the opacity')
+			.setName('Opacity')
 			.addText(
 				(text) => text
 					.setPlaceholder('0.1 - 1')
@@ -82,10 +81,10 @@ class MySettingTab extends PluginSettingTab {
 
 		// set transTime
 		new Setting(containerEl)
-			.setName('Set the fade out-in time(ms)')
+			.setName('Fade out-in time(ms)')
 			.addText(
 				(text) => text
-					.setPlaceholder('fade out-in time(ms)')
+					.setPlaceholder('Fade out-in time(ms)')
 					.setValue(this.plugin.settings.transTime.toString())
 					.onChange(debounce(async (value) => {
 						this.plugin.settings.transTime = value;
@@ -95,10 +94,10 @@ class MySettingTab extends PluginSettingTab {
 
 		// random background
 		new Setting(containerEl)
-			.setName('Apply random Background')
+			.setName('Apply random background')
 			.addButton(
 				(button) => button
-					.setButtonText('Apply Background')
+					.setButtonText('Apply background')
 					.onClick(() => {
 						this.plugin.setRandomBackground();
 					})
@@ -106,10 +105,10 @@ class MySettingTab extends PluginSettingTab {
 
 		// 设置删除按钮
 		new Setting(containerEl)
-			.setName('Delete Background')
+			.setName('Delete background')
 			.addButton(
 				(button) => button
-					.setButtonText('Delete Background')
+					.setButtonText('Delete background')
 					.onClick(() => {
 						this.plugin.deleteBackground();
 					})
@@ -129,7 +128,7 @@ class MySettingTab extends PluginSettingTab {
 			thumbnail.style.objectFit = 'cover'; // 保持图片比例裁剪
 
 			// 设置背景按钮
-			const setBackgroundButton = imgContainer.createEl('button', { text: 'Set as Background' });
+			const setBackgroundButton = imgContainer.createEl('button', { text: 'Set as background' });
 			setBackgroundButton.style.marginTop = '5px';
 			setBackgroundButton.addEventListener('click', () => {
 				this.plugin.setOrderedBackground(index);
@@ -140,12 +139,12 @@ class MySettingTab extends PluginSettingTab {
 }
 
 // 主插件类
-module.exports = class MyPlugin extends Plugin {
+module.exports = class BackgroundSet extends Plugin {
 	async onload() {
 		globalThis.imageAdressList = [];
 		await this.loadSettings();
 		this.app.workspace.onLayoutReady(() => {
-			this.addSettingTab(new MySettingTab(this.app, this));
+			this.addSettingTab(new BackgroundSettingTab(this.app, this));
 			this.setRandomBackground();
 		});
 	}
